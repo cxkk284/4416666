@@ -1,0 +1,90 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>About Us</title>  
+<link rel="stylesheet" href="styles.css">  
+</head>  
+<body>  
+  
+  <div class="header">
+    <div class="header-content">
+        <img src="logo.PNG" alt="logo" class="left-image">
+        <h1>AusInfoTech College</h1>
+    </div>
+</div>
+<div class="topnav">
+    <a href="index.html" onclick="showPage('createUserPage')">Create User</a>
+    <a href="login.html" onclick="showPage('loginPage')">Login</a>
+    <a href="home.html">Home</a>
+    <a href="About Us.html">About Us</a>
+    <a href="Contact.html">Contact</a>
+</div>
+<div class="my-container">
+  <div class="my-content-section my-service-commitment">
+      <h2>Service Commitment</h2>
+      <p>We promise to provide a professional and enthusiastic service attitude to ensure that every customer has a satisfactory service experience.</p>
+      <p>We solemnly promise to uphold the principles of integrity and efficiency, and provide you with the highest quality service until you are completely satisfied.</p>
+  </div>
+  <div class="my-content-section my-contact-details">
+      <div class="my-info-block my-about-ausinfotech">
+          <h3>About AusInfoTech College</h3>
+          <p>AusInfoTech College is a prestigious educational institution dedicated to providing high-quality education and training in technology and business.</p>
+          <ul>
+              <li><strong>Location and Campus:</strong> Prime location with modern facilities.</li>
+              <li><strong>Educational Offerings:</strong> Programs in technology, business, and more.</li>
+              <li><strong>Values and Culture:</strong> Integrity, innovation, excellence, respect, collaboration, and responsibility.</li>
+              <li><strong>Student Support Services:</strong> Tutoring, career counseling, mental health support.</li>
+              <li><strong>Industry Connections:</strong> Opportunities for internships, placements, and employment.</li>
+              <li><strong>Accreditation:</strong> Recognized by relevant educational authorities.</li>
+          </ul>
+          <img src="picture3.jpg" alt="Service Commitment Image" class="my-service-image">
+      </div>
+      <div class="my-info-block my-contact-info">
+          <h3>Welcome to Our Website!</h3>
+          <p>Phone number: <span>+61 3 9876 5432</span></p>
+          <p>Email address: <a href="mailto:info@ausinfotech.edu.au">info@ausinfotech.edu.au</a></p>
+          <form id="feedbackForm">
+              <label for="customer-name">Customer Name:</label>
+              <input type="text" id="customer-name" name="customerName" required>
+              
+              <label for="purchased-product">Product Purchased:</label>
+              <input type="text" id="purchased-product" name="productPurchased" required>
+              
+              <label for="purchase-date">Purchase Date:</label>
+              <input type="date" id="purchase-date" name="purchaseDate" required>
+              
+              <label for="order-number">Order Number:</label>
+              <input type="text" id="order-number" name="orderNumber" required>
+              
+              <label for="contact-email">Contact Email:</label>
+              <input type="email" id="contact-email" name="contactEmail" required>
+              
+              <label for="contact-phone">Contact Phone:</label>
+              <input type="tel" id="contact-phone" name="contactPhone" required>
+              
+              <label for="satisfaction-rating">Satisfaction Rating (1-5):</label>
+              <input type="number" id="satisfaction-rating" name="satisfactionRating" min="1" max="5" required>
+              
+              <label for="specific-issue">Specific Issue:</label>
+              <textarea id="specific-issue" name="specificIssue" required></textarea>
+              
+              <label for="customer-feedback">Customer Feedback:</label>
+              <textarea id="customer-feedback" name="feedback" required></textarea>
+              
+              <label for="additional-comments">Additional Comments:</label>
+              <textarea id="additional-comments" name="additionalComments"></textarea>
+              
+              <button type="submit">Submit Feedback</button>
+          </form>
+      </div>
+  </div>
+</div>
+<footer>  
+    <div class="footer-content">  
+         <p>Copyright &copy; Jatxon</p>
+    </div>  
+</footer>       
+</body>  
+</html>

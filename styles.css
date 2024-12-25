@@ -1,0 +1,658 @@
+/*    Jaxton  */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #ffffff; /* You can adjust the background color as needed */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.header h1 {
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+.left-image {
+  height: 50px; /* Adjust the height as needed */
+}
+
+.topnav {
+  background-color: #988f8f; /* Light gray background */
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+.topnav a {
+  margin: 0 15px; /* Adjust the spacing between links */
+  text-decoration: none;
+  color: #333333; /* text color */
+  font-weight: bold;
+}
+
+.topnav a:hover {
+  color: #007BFF; /* Color when hovering the mouse */
+}
+
+/* Ensure sufficient space in the content area to avoid overlapping with headers and footers */
+.content {
+  padding: 20px;
+  margin-top: 60px; /* Adjust according to the height of the header */
+  margin-bottom: 60px; /* Adjust according to the height of the footer */
+}
+
+/* Additional class for hiding elements */  
+.hidden {  
+    display: none;  
+}   
+
+.hero-banner {  
+    /* Add style to Hero banner */  
+    width: 200px; /* Can be adjusted according to demand */  
+    height: 200px; /* Adjust based on image size and page layout */  
+    background-image: url('1.jpg'); /* If the image loading fails, a background image can be used as an alternative */  
+    background-size: cover; /* Ensure that the image covers the entire container*/  
+    background-position: center; /* Center Image  */  
+    text-align: center; /* If you need to add text above to center it */  
+    position: relative; /* If you need to add an overlay or text on top of it */  
+}  
+
+/* If using<img>tags, this style may be necessary to ensure that the image is displayed correctly */  
+.hero-banner img {  
+    width: 200px; /* Make the image width the same as the container width */  
+    height: auto; /* Maintain the scale of the image */  
+}  
+/* Set styles for containers and list items */  
+
+  footer {  
+    background-color: #000000; /* Light gray background */  
+    text-align: center; /*Center the content (but in this case, we have already set it in. footer content) */  
+    padding: 10px 0; /* Bottom and top margins of footer */  
+    font-family: Arial, sans-serif; /* set font */  
+    color: #ffffff; /* text color */  
+}  
+  
+.footer-content p {  
+    margin: 0;  
+}
+
+.create-page {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Style */
+.create-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form Group Style */
+.create-page-form {
+  margin-bottom: 20px;
+}
+
+.create-page-group {
+  margin-bottom: 15px;
+}
+
+/* Label and input box styles */
+.create-page-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.create-page-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* button */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 10px; /* Add a right margin to the logout button */
+}
+
+/* Create user button styles */
+button[onclick="createUser()"] {
+  background-color: #4CAF50; /* green background */
+  color: white; /* White Text */
+}
+
+/* Cancel button style */
+#logoutButton {
+  background-color: #f44336; /* Red background */
+  color: white; /* White Text */
+}
+
+/* Button hover style */
+button:hover {
+  opacity: 0.9; /* Reduce opacity when hovering */
+}
+
+
+/* Login page container style */
+.login-page-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Style */
+.login-page-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* form sheet  */
+.login-page-form {
+  margin-bottom: 20px;
+}
+
+.login-page-group {
+  margin-bottom: 15px;
+}
+
+/* Label and input box styles */
+.login-page-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.login-page-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* button */
+button {
+  display: block;
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #007BFF; /* Blue background */
+  color: white; /* White Text */
+}
+
+/* Button hover style */
+button:hover {
+  background-color: #0056b3; /* Deeper blue background */
+}
+
+#shoppingPage {
+  display: block; /* Display shopping cart page */
+  padding: 20px;
+}
+
+.shopping-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero banner image style */
+
+/* Centered title style */
+.centered-heading {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Container Style */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Product List Style */
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.product {
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.product h2, .product h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product p {
+  color: #666;
+  line-height: 1.5;
+}
+
+.price {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #d9534f; /* Red Price */
+}
+
+.quantity {
+  width: 50px;
+  padding: 5px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+/* button */
+.add-to-cart, .remove, #purchase-button, #clear-cart-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart {
+  background-color: #5cb85c; /* Green add button */
+  color: #fff;
+  width: 150px;
+}
+
+.add-to-cart:hover {
+  background-color: #4cae4c; /*Deeper Green */
+}
+
+.remove {
+  background-color: #d9534f; /* Red delete button, initially hidden */
+  color: #fff;
+  display: none; /* Still hidden, will be displayed through JavaScript */
+}
+
+.remove:hover {
+  background-color: #c9302c; /* Deeper Red */
+}
+
+#purchase-button {
+  background-color: #337ab7; /* Blue checkout button */
+  color: #fff;
+  margin-top: 20px;
+  width: 150px;
+}
+
+#purchase-button:hover {
+  background-color: #286090; /* Deeper Blue */
+  width: 150px;
+}
+
+#clear-cart-button {
+  background-color: #d9534f; /* Red clear shopping cart button */
+  color: #fff;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+#clear-cart-button:hover {
+  background-color: #c9302c; /* Deeper Red */
+}
+
+/* Shopping Cart Summary Style */
+.cart-summary {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.cart-summary h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#product-totals, #total-price {
+  font-weight: bold;
+  color: #333;
+}
+
+.aus-container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid #000; /* Newly added border styles */
+}
+
+/* Head style */
+.aus-header {
+  background: #4CAF50;
+  color: #fff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #79c76a 3px solid;
+}
+
+.aus-header h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Main content area style */
+.aus-home-content {
+  padding: 20px;
+  background: #fff;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Information section style */
+.aus-info {
+  text-align: center;
+}
+
+.aus-info h2 {
+  color: #4CAF50;
+}
+
+.aus-info p {
+  font-size: 16px;
+}
+
+.aus-info a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.aus-info a:hover {
+  text-decoration: underline;
+}
+
+/* Course section style */
+.aus-courses {
+  margin-top: 40px;
+}
+
+.aus-courses h3 {
+  color: #4CAF50;
+  text-align: center;
+}
+
+.aus-courses ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.aus-courses li {
+  background: #f9f9f9;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.aus-courses li:hover {
+  background: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.aus-courses h2 {
+  color: #4CAF50;
+  font-size: 18px;
+}
+
+.aus-courses h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+
+.aus-courses p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Partial styles of training resource package */
+.aus-training-kits {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.aus-training-kits h3 {
+  color: #4CAF50;
+}
+
+.aus-training-kits p {
+  font-size: 16px;
+  color: #666;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section {
+  margin-bottom: 40px;
+}
+
+.about-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  color: #007BFF;
+}
+
+.about-text {
+  margin-bottom: 40px;
+}
+
+.courses-title, .values-title, .contact-title {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 1.75em;
+  color: #fb5d02;
+}
+
+.courses-list, .values-list {
+  list-style: none;
+  padding: 0;
+  color: #f9b304;
+}
+
+.courses-list li, .values-list li {
+  background: url('bullet.png') no-repeat left center; /* Optional: use a custom bullet icon */
+  padding-left: 25px;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.contact-section {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid #ddd;
+}
+
+.contact-email {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.contact-email:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-title {
+      font-size: 2em;
+  }
+
+  .courses-title, .values-title, .contact-title {
+      font-size: 1.5em;
+  }
+
+  .courses-list li, .values-list li {
+      font-size: 1em;
+  }
+}
+
+.my-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.my-content-section {
+  margin-bottom: 40px;
+}
+
+.my-service-commitment h2,
+.my-contact-details h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.my-service-commitment p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.my-service-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 20px;
+}
+
+.my-contact-details {
+  display: flex;
+  flex-wrap: wrap; /* Allow child elements to wrap */
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.my-info-block {
+  flex: 1 1 calc(50% - 20px); /* Calculate the width using calc and subtract the gap */
+}
+
+@media (max-width: 768px) {
+  .my-info-block {
+      flex: 1 1 100%; /* Fill the entire line on the small screen */
+  }
+}
+
+.my-about-ausinfotech h3,
+.my-contact-info h3 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.my-about-ausinfotech ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.my-about-ausinfotech ul li {
+  background: url('bullet.png') no-repeat left center; /* Optional: Use custom bullet icon */
+  padding-left: 20px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.my-contact-info p,
+.my-contact-info form {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.my-contact-info form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.my-contact-info form input,
+.my-contact-info form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.my-contact-info form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.my-contact-info form button:hover {
+  background-color: #45a049;
+}

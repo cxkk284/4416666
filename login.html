@@ -1,0 +1,125 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>About Us</title>  
+<link rel="stylesheet" href="styles.css">  
+</head>  
+<body class="login-page">  
+  
+    <div class="header">
+        <div class="header-content">
+            <img src="logo.PNG" alt="logo" class="left-image">
+            <h1>AusInfoTech College</h1>
+        </div>
+    </div>
+    <div class="topnav">
+        <a href="index.html" onclick="showPage('createUserPage')">Create User</a>
+        <a href="login.html" onclick="showPage('loginPage')">Login</a>
+        <a href="home.html">Home</a>
+        <a href="About Us.html">About Us</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+    
+
+    <div id="loginContainer" class="login-container">
+        <div class="login-page-container">
+            <h2>Login</h2>
+            <!-- ... Other content ... -->
+            <div id="Form" class="login-page-form">
+                <div class="login-page-group">
+                    <label for="loginUsername">Username:</label>
+                    <input type="text" id="loginUsername" placeholder="Enter your username" required>
+                </div>
+                <div class="login-page-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                </div>
+                <button onclick="login()">Login</button>
+            </div>
+            </div>
+            <footer class="login-page-footer">
+                <div class="login-page-footer-content">
+                    <p>Copyright &copy; Jatxon</p>
+                </div>
+            </footer>
+    </div>
+    
+
+          <div id="shoppingPage" style="display: none;">    
+            <!-- Shopping page -->  
+        <div class="shopping-page">  
+        <!-- Hero banner image -->  
+        <div class="hero-banner"></div> 
+        
+        <h1 class="centered-heading">shopping cart</h1>
+        <div class="container">  
+            <div class="product-list">  
+                <!-- Example product, remove from price`$` --> 
+                <div class="product" data-price="100">  
+                    <h2>ICTWEB601</h2>  
+                    <h3>Web Document Analysis and Design</h3>
+                    <p>Learn to analyze web document requirements, design and produce web documents, and understand the fundamentals of web development. This course covers client-side and server-side scripting, HTML, CSS, and basic web design principles.</p>
+                    <p class="price">price: $100<span></span></p>  
+                    <input class="quantity" type="number" value="0" min="0"> 
+                    <button class="add-to-cart">Add to Cart</button>  
+                    <button class="remove" data-product-index="0" style="display:none;">Delete</button> <!-- Initially hidden -->  
+                </div>     
+                <!-- Repeat the above div to add other products, just change the data price and text -->  
+                <div class="product" data-price="200">  
+                    <h2>ICTWEB602</h2>  
+                    <h3>Web Scripting and Programming</h3>
+                    <p>Dive deeper into web scripting and programming with languages such as JavaScript, PHP, and ASP. Learn to create interactive and dynamic web pages, and understand the differences between client-side and server-side scripting.</p>
+                    <p class="price">price: $200<span></span></p>  
+                    <input class="quantity" type="number" value="0" min="0"> 
+                    <button class="add-to-cart">Add to Cart</button>  
+                    <button class="remove" data-product-index="0" style="display:none;">Delete</button> <!-- Initially hidden -->  
+                </div>       
+                <div class="product" data-price="300">  
+                    <h2>ICTWEB603</h2>  
+                    <h3>Web Testing and Debugging</h3>
+                    <p>Master the skills of web testing and debugging to ensure your web applications are functional, secure, and performant. This course covers test planning, browser compatibility testing, security testing, and validation techniques.</p>
+                    <p class="price">price: $300<span></span></p>  
+                    <input class="quantity" type="number" value="0" min="0"> 
+                    <button class="add-to-cart">Add to Cart</button>  
+                    <button class="remove" data-product-index="0" style="display:none;">Delete</button> <!-- Initially hidden -->  
+                </div>      
+                <div class="product" data-price="400">  
+                    <h2>ICTWEB604</h2>  
+                    <h3>Responsive Web Design</h3>
+                    <p>Discover the principles of responsive web design and learn to create websites that adapt seamlessly to different devices and screen sizes. This course covers design techniques, CSS media queries, and best practices for responsive design.</p>
+                    <p class="price">price: $400<span></span></p> 
+                    <input class="quantity" type="number" value="0" min="0"> 
+                    <button class="add-to-cart">Add to Cart</button>  
+                    <button class="remove" data-product-index="0" style="display:none;">Delete</button> <!-- Initially hidden -->  
+                </div>    
+                <!-- ... Other products ... -->  
+                <div class="product" data-price="500">  
+                    <h2>ICTWEB605</h2>  
+                    <h3>Web Development Project Management</h3>
+                    <p>Learn the essentials of project management for web development projects. This course covers project planning, resource allocation, risk management, and communication techniques to ensure successful project delivery.</p>
+                    <p class="price">price: $500<span></span></p>  
+                    <input class="quantity" type="number" value="0" min="0"> 
+                    <button class="add-to-cart">Add to Cart</button>  
+                    <button class="remove" data-product-index="0" style="display:none;">Delete</button> <!-- Initially hidden -->  
+                </div>       
+            </div>  
+        </div>
+            <div class="cart-summary">  
+                <h2>Shopping Cart Summary</h2>  
+                <div id="product-totals"></div>  
+                <p>The total price of the five products is: $<span id="total-price">0</span></p>  
+                <button id="purchase-button">Checkout</button>  
+                <button id="clear-cart-button">Clear Cart</button>
+        
+            </div>  
+        </div>  
+    <script src="script.js"></script>  
+    <footer>  
+        <div class="footer-content">  
+            <p>Copyright &copy; Jatxon</p>
+        </div>  
+    </footer>   
+</body>  
+</html>
